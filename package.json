@@ -237,6 +237,9 @@
     "url": "https://github.com/tfausak/purple-yolk.git"
   },
   "scripts": {
+    "compile": "tsc -p ./",
+    "prepackage": "npm run compile",
+    "package": "vsce package",
     "vscode:prepublish": "esbuild --bundle --external:vscode --outdir=dist --platform=node --target=node8 source/client.ts"
   },
   "version": "1.0.6"
